@@ -34,11 +34,7 @@ std::ostream& operator<<(std::ostream& ostr, const Sequence& seq)
     return ostr;
 }
 
-// note: after a sequence, there is always a terminating space character.
-// even if the sequence has a length of zero.
-// that means first, we have to check if current read position is a space char,
-// and if so, remove it.
-// bottom line: this function stops AFTER taking the whitespace from the stream.
+
 std::istream& operator>>(std::istream& istr, Sequence& seq)
 {
     if(!istr.good()) // only read if stream is readable (this may not be set if we reached the end,
@@ -65,9 +61,7 @@ std::istream& operator>>(std::istream& istr, Sequence& seq)
         return istr;
     }
 
-    // extration should per definition cause seq to be overwritten,
-    // which is not the case if the stream contained no readable data/empty sequence,
-    // so we have to do it manually here.
+
     seq.clear();
 
     return istr;
