@@ -12,3 +12,41 @@
 #include <stdio.h>
 
 #endif /* defined(____Alignment__) */
+
+
+
+class EditDistance
+
+{
+public:
+    float operator() (char a, char b) const;
+};
+
+template <typ Distance>
+
+class Alignment
+{
+public:
+    Alignment ();
+    Alignment (const Sequence& seq1, const Sequence& seq2);
+    Alignment (const Alignment& a);
+    virtual  ~ Alignment();
+    
+    
+    Alignment& operator = (const Alignment& a);
+    bool operator == (Alignment a);
+    void print (ostream& os = cout);
+    void setSequence1 (const Sequence& seq);
+    void setSequence2 (const Sequence& seq);
+    const Sequence& getSequence1() const;
+    const Sequence& getSequence2() const;
+    
+    void computeGlobalAlignmnet();
+    const std::pair<std::string, std::string>& getAlginment () const;
+    
+private:
+    Distance distance_;
+    
+    
+    
+};
