@@ -1,6 +1,6 @@
 all: se
 
-se: main.o Sequence.o NucleicAcid.o Protein.o
+se: main.o Sequence.o NucleicAcid.o Protein.o Edge.o Node.o Graph.o
 	g++ main.o Sequence.o NucleicAcid.o Protein.o Edge.o Node.o Graph.o -o se
 
 main.o: main.cpp
