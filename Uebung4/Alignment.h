@@ -11,8 +11,7 @@
 
 #include <stdio.h>
 #include <iostream>     // std::cout, std::ostream, std::ios
-class Sequence;
-
+#include "Sequence.h"
 #endif /* defined(____Alignment__) */
 
 
@@ -48,6 +47,8 @@ public:
     
 private:
     Distance distance_;
+    Sequence seq1_; // Sequence1
+    Sequence seq2_; // Sequence2
     
     
     
