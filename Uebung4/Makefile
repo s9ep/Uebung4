@@ -12,7 +12,7 @@ Sequence.o: Sequence.cpp
 NucleicAcid.o: NucleicAcid.cpp
 	g++ -c NucleicAcid.cpp
 
-Alignment.o: Alignment.o
+Alignment.o: Alignment.cpp
 	g++ -c Alignment.cpp
 
 clean:
