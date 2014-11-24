@@ -33,15 +33,23 @@ public:
     Alignment (const Alignment& a);
     virtual  ~ Alignment();
     
-    
+    // operator=
     Alignment& operator = (const Alignment& a);
+    // operator ==
     bool operator == (Alignment a);
+    // print // TODO
     void print (std::ostream& os = std::cout);
+    //setter
     void setSequence1 (const Sequence& seq);
     void setSequence2 (const Sequence& seq);
-    const Sequence& getSequence1() const;
-    const Sequence& getSequence2() const;
-    
+    //getter
+    const Sequence& getSequence1() const{
+        return seq1_;
+    }
+    const Sequence& getSequence2() const{
+        return seq2_;
+    }
+    // TODO
     void computeGlobalAlignmnet();
     const std::pair<std::string, std::string>& getAlginment () const;
     
