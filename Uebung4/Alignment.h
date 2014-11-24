@@ -37,7 +37,7 @@ public:
     Alignment& operator = (const Alignment& a);
     // operator ==
     bool operator == (Alignment a);
-    // print // TODO
+    // print 
     void print (std::ostream& os = std::cout);
     //setter
     void setSequence1 (const Sequence& seq);
@@ -51,13 +51,17 @@ public:
     }
     // TODO
     void computeGlobalAlignmnet();
-    const std::pair<std::string, std::string>& getAlginment () const;
+    
+    // getAlginment
+    const std::pair<std::string, std::string>& getAlginment () const{
+        return myalignment;
+    }
     
 private:
     Distance distance_;
     Sequence seq1_; // Sequence1
     Sequence seq2_; // Sequence2
-    
+    std::pair<std::string, std::string> myalignment;
     
     
 };
