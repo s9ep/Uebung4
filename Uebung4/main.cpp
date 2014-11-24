@@ -1,4 +1,4 @@
-#include "common.h"
+/*#include "common.h"
 #include "NucleicAcid.h"
 #include "Alignment.h"
 #include "console_color.h"
@@ -173,4 +173,4 @@ int testAlignment()
 
 
     return 0;
-}
+}*/
