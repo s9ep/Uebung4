@@ -10,6 +10,8 @@
 #define ____Alignment__
 
 #include <stdio.h>
+#include <iostream>     // std::cout, std::ostream, std::ios
+class Sequence;
 
 #endif /* defined(____Alignment__) */
 
@@ -22,7 +24,7 @@ public:
     float operator() (char a, char b) const;
 };
 
-template <typ Distance>
+template <typename Distance>
 
 class Alignment
 {
@@ -35,7 +37,7 @@ public:
     
     Alignment& operator = (const Alignment& a);
     bool operator == (Alignment a);
-    void print (ostream& os = cout);
+    void print (std::ostream& os = std::cout);
     void setSequence1 (const Sequence& seq);
     void setSequence2 (const Sequence& seq);
     const Sequence& getSequence1() const;

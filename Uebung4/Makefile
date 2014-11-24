@@ -15,8 +15,5 @@ NucleicAcid.o: NucleicAcid.cpp
 Alignment.o: Alignment.o
 	g++ -c Alignment.cpp
 
-
-
-
 clean:
 	rm -rf *.o  Uebung4

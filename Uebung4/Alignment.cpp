@@ -7,4 +7,5 @@
 //
 
 #include "Alignment.h"
+#include "Sequence.h"
 
