@@ -1,23 +1,23 @@
-#ifndef NUCLEICACID_H
-#define NUCLEICACID_H
-
+#include <iostream>
+#include <string>
 #include "Sequence.h"
 
-class NucleicAcid : public Sequence
-{
+
+#ifndef NUCLEICACID_H_INCLUDED
+#define NUCLEICACID_H_INCLUDED
+
+
+class NucleicAcid: public Sequence {
+    
 public:
-		//Default constructor
-		NucleicAcid();
-
-		//Copy constructor, it is marked as explicit such that
-		//the compiler will not use it as automatic type conversion
-		//constructor
-		explicit NucleicAcid(const NucleicAcid& seq);
-
-		// Direct std::string constructor
-		NucleicAcid(const std::string& seq);
-
-        virtual bool isValid() const;
+    NucleicAcid();
+    NucleicAcid(std::string str);
+    NucleicAcid(NucleicAcid & na);
+    ~NucleicAcid();
+    NucleicAcid& operator=(const NucleicAcid & seq);
+    friend std::istream& operator>>(std::istream& st, NucleicAcid& seq);
+    friend std::ostream& operator<<(std::ostream& st, NucleicAcid& seq);
+    
 };
 
-#endif
+#endif // NUCLEICACID_H_INCLUDED
